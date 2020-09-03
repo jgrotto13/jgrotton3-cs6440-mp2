@@ -58,7 +58,7 @@ def calculate_hr(row):
 
 def calculate_icu(row):
     if row['inIcuCumulative'] > 0 and row['positive'] > 0:
-        return round(((row['death'] / row['positive']) * 100), 2)
+        return round(((row['inIcuCumulative'] / row['positive']) * 100), 2)
     else:
         return 0
 
